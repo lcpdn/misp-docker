@@ -11,7 +11,7 @@
 # # docker build -t <tag> --build-arg MYSQL_ROOT_PASSWORD=<mysql_root_pw> .
 
 # We are based on Ubuntu:latest
-FROM ubuntu
+FROM ubuntu:14.04
 MAINTAINER Xavier Mertens <xavier@rootshell.be>
 
 # Set environment variables
@@ -106,7 +106,7 @@ RUN \
 
 # CakeResque normally uses phpredis to connect to redis, but it has a (buggy) fallback connector through Redisent. 
 # It is highly advised to install phpredis
-RUN pecl install redis
+RUN pecl install redis-2.2.8
 RUN apt-get install -y php5-redis
 
 # After installing it, enable it in your php.ini file
