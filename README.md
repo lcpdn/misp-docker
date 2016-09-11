@@ -16,7 +16,7 @@ The build is based on Ubuntu and will install all the required components. The f
 # Building the image
 
 ```
-# git clone https://github.com/xme/misp-docker
+# git clone https://github.com/lcpdn/misp-docker
 # cd misp-docker
 # docker build -t misp/misp --build-arg MYSQL_ROOT_PASSWORD=<mysql_root_pw> .
 ```
